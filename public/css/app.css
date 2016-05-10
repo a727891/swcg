@@ -1,0 +1,17 @@
+/* app css stylesheet */
+body{
+    background-color: #0f0f0f;
+}
+#slides{
+    height:600px;
+}
+
+.picSlide{
+    /*height:600px;*/
+    justify-content: center;
+
+}
+.picSlide img{
+    margin: auto;
+    height:600px;
+}
