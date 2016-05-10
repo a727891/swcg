@@ -1,17 +1,60 @@
 /* app css stylesheet */
 body{
-    background-color: #0f0f0f;
+    background-color: whitesmoke;
 }
 #slides{
-    height:600px;
+    height:900px;
+}
+.picSlide.item {
+    height: 900px;
 }
 
-.picSlide{
-    /*height:600px;*/
-    justify-content: center;
-
-}
-.picSlide img{
+.picSlide.item img {
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     margin: auto;
-    height:600px;
+}
+.carousel-caption{
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 2em;
+    color:white;
+    background-color:rgba(0, 0, 0, 0.3);
+}
+
+.actionButton{
+    /*width: 600px;*/
+    /*margin: auto;*/
+    position: fixed;
+    right:15px;
+    bottom:15px;
+}
+
+.alert-fixed {
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index:9999;
+    border-radius:0px
+}
+
+.signupForm{
+
+    height:700px;
+    width:1000px;
+    margin:auto;
+    padding-top:50px;
+}
+.btn.active{
+    color:yellow;
+    background-color: rgba(64,128,64,.7);
+}
+.btn.active:hover{
+    color:yellow;
 }

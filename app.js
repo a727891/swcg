@@ -1,17 +1,16 @@
-
 /**
  * Module dependencies
  */
 
 var express = require('express'),
-  bodyParser = require('body-parser'),
-  methodOverride = require('method-override'),
-  //errorHandler = require('errorhandler'),
-  morgan = require('morgan'),
-  routes = require('./routes'),
-  api = require('./routes/api'),
-  http = require('http'),
-  path = require('path');
+    bodyParser = require('body-parser'),
+    methodOverride = require('method-override'),
+//errorHandler = require('errorhandler'),
+    morgan = require('morgan'),
+    routes = require('./routes'),
+    api = require('./routes/api'),
+    http = require('http'),
+    path = require('path');
 
 var app = module.exports = express();
 
@@ -26,7 +25,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({
-  extended: true
+    extended: true
 }));
 app.use(bodyParser.json());
 app.use(methodOverride());
@@ -56,6 +55,8 @@ app.get('/partials/:name', routes.partials);
 // JSON API
 app.get('/api/name', api.name);
 app.get('/api/slides', api.Slides);
+app.post('/api/signup', api.signup);
+app.post('/api/list', api.getList);
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);
@@ -66,5 +67,5 @@ app.get('*', routes.index);
  */
 
 http.createServer(app).listen(app.get('port'), function () {
-  console.log('Express server listening on port ' + app.get('port'));
+    console.log('Express server listening on port ' + app.get('port'));
 });
