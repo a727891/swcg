@@ -1,6 +1,7 @@
 /* app css stylesheet */
 body{
     background-color: whitesmoke;
+    overflow:hidden;
 }
 #slides{
     height:900px;
